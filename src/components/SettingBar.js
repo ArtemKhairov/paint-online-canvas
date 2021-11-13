@@ -15,6 +15,13 @@ const SettingBar = () => {
         defaultValue={1}
         onChange={(e)=>toolState.setLineWidth(e.target.value)}
       />
+      <label htmlFor="canvas-color"> Цвет обводки</label>
+      <input
+        style={{ margin: "0 10px" }}
+        id="canvas-color"
+        type="color"
+        onChange={(e)=>toolState.setStrokeColor(e.target.value)}
+      />
     </div>
   );
 };

@@ -14,7 +14,7 @@ export default class Tool {
 
   // сеттер цвета обводки
   set strokeColor(color) {
-    this.ctx.stokeStyle = color;
+    this.ctx.strokeStyle = color;
   }
 
   // сеттер ширины линии

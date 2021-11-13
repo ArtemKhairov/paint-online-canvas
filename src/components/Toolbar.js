@@ -6,6 +6,13 @@ import Brush from "../tools/Brush";
 import Rect from "../tools/Rect";
 
 const Toolbar = () => {
+  // Изменение цвета фигуры
+  const changeColor = (e) => {
+    console.log(e.target.value)
+    toolState.setStrokeColor(e.target.value);
+    toolState.setFillColor(e.target.value);
+  };
+
   return (
     <div className="toolbar">
       <button
@@ -19,7 +26,11 @@ const Toolbar = () => {
       <button className="toolbar__btn circle" />
       <button className="toolbar__btn eraser" />
       <button className="toolbar__btn line" />
-      <input type="color" style={{ marginLeft: "10px" }} />
+      <input
+        type="color"
+        style={{ marginLeft: "10px" }}
+        onChange={(e) => changeColor(e)}
+      />
       <button className="toolbar__btn undo" />
       <button className="toolbar__btn redo" />
       <button className="toolbar__btn save" />
