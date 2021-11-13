@@ -31,7 +31,7 @@ const Toolbar = () => {
         onChange={(e) => changeColor(e)}
       />
       <button className="toolbar__btn undo" onClick={()=>canvasState.undo()}/>
-      <button className="toolbar__btn redo" />
+      <button className="toolbar__btn redo" onClick={()=>canvasState.redo()}/>
       <button className="toolbar__btn save" />
     </div>
   );
