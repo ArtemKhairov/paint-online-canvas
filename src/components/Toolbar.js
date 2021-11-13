@@ -8,7 +8,6 @@ import Rect from "../tools/Rect";
 const Toolbar = () => {
   // Изменение цвета фигуры
   const changeColor = (e) => {
-    console.log(e.target.value)
     toolState.setStrokeColor(e.target.value);
     toolState.setFillColor(e.target.value);
   };
@@ -31,7 +30,7 @@ const Toolbar = () => {
         style={{ marginLeft: "10px" }}
         onChange={(e) => changeColor(e)}
       />
-      <button className="toolbar__btn undo" />
+      <button className="toolbar__btn undo" onClick={()=>canvasState.undo()}/>
       <button className="toolbar__btn redo" />
       <button className="toolbar__btn save" />
     </div>
